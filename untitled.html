@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Philippine Contractors Accreditation Board (PCAB) Portal</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+<link type="text/css" rel="Stylesheet" href="../css/style.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+</head>
+<main>
+<!--
+    <div class="header-img"></div>
+-->
+<!--
+<div id="header" style="oveflow: hidden; height: 60px">
+  <img src="/assets/pcab_logo_headerMini.jpg" style="max-width: 100%" />
+</div> 
+-->
+</main>
+<body>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-165845942-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-165845942-1');
+</script>
+
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="index.php">
+    <img src="/assets/pcab_logo.gif" width="40" height="40" alt="PCAB">
+  </a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav me-auto">
+		<li class="nav-item active">
+			<a class="nav-link active" href="index.php">Regular Licenses<span class="sr-only">(current)</span></a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="jvlicenses.php">Special Licenses</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="pakyawlicenses.php">Pakyaw Licenses</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="suspendedlicenses.php">Suspended/Revoked Licenses</a>
+		</li>	
+		<li class="nav-item">
+			<a class="nav-link" href="stats.php">Stats</a>
+		</li>	
+	</ul>
+	
+	<ul class="nav navbar-nav navbar-right">
+		
+		<li class="nav-item">
+			<a class="nav-link" href="/assets/Instructional Guide_How to Verify a Contractor.pdf"><i class="fa fa-file-pdf-o"></i> Download Instructional Guide</a>
+		</li>
+    </ul> 
+  </div>
+</nav>		
+<div id="_phpgrid_script_includeonce" style="display:inline">
+<link rel="stylesheet" id="theme-custom-style" type="text/css" media="screen" href="/phpGrid/css/cobalt/jquery-ui.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-ui-multiselect-widget/2.0.2/jquery.multiselect.css">
+<link rel="stylesheet" type="text/css" media="screen" href="/phpGrid/css/ui.jqgrid.css" />
+<link rel="stylesheet" type="text/css" href="/phpGrid/css/datagrid.css">
+<link rel="stylesheet" type="text/css" media="screen" href="/phpGrid/js/datetimepicker/jquery-ui-timepicker-addon.css" />
+<script type="text/javascript">
+                    if (typeof jQuery == "undefined"){document.write("<script src='/phpGrid/js/jquery-3.3.1-wkfix.js' type='text/javascript'><\/script>");}
+                  </script>
+<script src="/phpGrid/js/jquery-ui-1.11.2.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ui-multiselect-widget/2.0.2/jquery.multiselect.js" type="text/javascript"></script>
+<script src="/phpGrid/js/i18n/grid.locale-en.js" type="text/javascript"></script>
+<script src="/phpGrid/js/jquery.jqgrid.min.js" type="text/javascript"></script>
+<script src="/phpGrid/js/grid.import.fix.js" type="text/javascript"></script>
+<script src="/phpGrid/js/jquery-migrate-3.0.1.min.js" type="text/javascript"></script>
+<script src="/phpGrid/js/datetimepicker/jquery-ui-timepicker-addon.js" type="text/javascript"></script>
+<script src="/phpGrid/js/jquery.browser.min.js" type="text/javascript"></script>
+<script src="/phpGrid/js/notify.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+                        if (typeof $().modal != "function"){document.write("<link rel='stylesheet' href='/phpGrid/css/font-awesome.min.css'>") }
+                    </script>
+</div>
+<style type="text/css">
+#Licenses tr:hover{background-image: none;background: !important; color:black}
+table#Licenses tr{ opacity: 1}
+#_fileLink > img {width:120px;}
+.notifyjs-bootstrap-base.notifyjs-bootstrap-error{
+                white-space: pre-wrap;
+                font-size: 12px;
+             }
+</style>
+<script type="text/javascript">
+//<![CDATA[
+var lastSel;
+var phpGrid_Licenses;
+jQuery(document).ready(function($){ 
+phpGrid_Licenses = jQuery("#Licenses").jqGrid({
+url:"/phpGrid/data.php?dt=json&gn=Licenses",
+datatype:"json",
+mtype:"GET",
+prmNames: {id:"_rowid"},
+colNames:["id","Name Of Firm","License Number","Region","Category","Principal Classification","Type","CFY","Valid From","Valid To","Reg.for Gov.Infra.Projects"],
+colModel:[{"autoResizable":true,"name":"id","index":"id","hidden":true,"headerTitle":"id","edittype":"text","editable":false,"editoptions":{"size":"30"},"editrules":{"edithidden":false,"required":false,"number":true}},{"autoResizable":true,"name":"CompanyName","index":"CompanyName","hidden":false,"headerTitle":"CompanyName","edittype":"text","editable":false,"editoptions":{"size":"30"},"editrules":{"edithidden":false,"required":false}},{"autoResizable":true,"name":"LicenseNum","index":"LicenseNum","hidden":false,"headerTitle":"LicenseNum","edittype":"text","editable":false,"editoptions":{"size":"30"},"editrules":{"edithidden":false,"required":false}},{"autoResizable":true,"name":"Region","index":"Region","hidden":false,"headerTitle":"Region","edittype":"text","editable":false,"editoptions":{"size":"30"},"editrules":{"edithidden":false,"required":false}},{"autoResizable":true,"name":"Category","index":"Category","hidden":false,"headerTitle":"Category","edittype":"text","editable":false,"editoptions":{"size":"30"},"editrules":{"edithidden":false,"required":false}},{"autoResizable":true,"name":"PrincipalClassification","index":"PrincipalClassification","hidden":false,"headerTitle":"PrincipalClassification","edittype":"text","editable":false,"editoptions":{"size":"30"},"editrules":{"edithidden":false,"required":false}},{"autoResizable":true,"name":"Type","index":"Type","hidden":false,"headerTitle":"Type","edittype":"text","editable":false,"editoptions":{"size":"30"},"editrules":{"edithidden":false,"required":false}},{"autoResizable":true,"name":"CFY","index":"CFY","hidden":false,"headerTitle":"CFY","edittype":"text","editable":false,"editoptions":{"size":"30"},"editrules":{"edithidden":false,"required":false}},{"autoResizable":true,"name":"ValidFrom","index":"ValidFrom","hidden":false,"headerTitle":"ValidFrom","edittype":"text","editable":false,"editoptions":{"dataInit":function(el){$(el).datepicker({                                                changeMonth: true, changeYear: true, yearRange: '-100:+0', dateFormat:'yy-mm-dd'},$.datepicker.regional['en']);},"size":"30"},"editrules":{"edithidden":false,"required":false,"date":true}},{"autoResizable":true,"name":"ValidTo","index":"ValidTo","hidden":false,"headerTitle":"ValidTo","edittype":"text","editable":false,"editoptions":{"dataInit":function(el){$(el).datepicker({                                                changeMonth: true, changeYear: true, yearRange: '-100:+0', dateFormat:'yy-mm-dd'},$.datepicker.regional['en']);},"size":"30"},"editrules":{"edithidden":false,"required":false,"date":true}},{"autoResizable":true,"name":"GovReg","index":"GovReg","hidden":false,"headerTitle":"GovReg","edittype":"select","editable":false,"formatter":"select","stype":"select","searchoptions":{"sopt":["eq"],"value":":All;0:No;1:Yes"},"editoptions":{"value":"0:No;1:Yes"},"editrules":{"edithidden":false,"required":false,"number":true}}],
+pager: "#Licenses_pager1",
+rowNum:1500,
+rowList:[10,25,50,100,200,500,"10000:All"],
+sortname:"1",
+sortorder:"asc",
+viewrecords:true,
+pgtext:"Page {0} of {1}",
+multiselect:false,
+multiPageSelection:true,
+multiselectPosition:"right",
+caption:"PCAB Regular License Online Verification",
+altRows:true,
+scrollOffset:0,
+rownumbers:false,
+shrinkToFit:true,
+autowidth:false,
+hiddengrid:false,
+scroll:false,
+height:"auto",
+autoresizeOnLoad:true,
+iconSet:"fontAwesome",
+guiStyle:"jQueryUI",
+autoencode:true,
+checkOnUpdate:true,
+singleSelectClickMode:"selectonly",
+widthOrg:"auto",
+sortable:true,
+loadError:
+                    function(xhr,status, err) {
+                        try{
+                            jQuery.jgrid.info_dialog(
+                                jQuery.jgrid.errors.errcap,
+                                "<div style=\"font-size:10px;text-align:left;width:300px;;height:150px;overflow:auto;color:red;\">"+ xhr.responseText +"</div>",
+                                jQuery.jgrid.edit.bClose,{buttonalign:"center"});
+                        }
+                        catch(e) { alert(xhr.responseText)};
+                    },
+gridview:true,
+
+"toolbar":[true,"top"],
+loadtext:"Loading phpGrid ..."
+});
+jQuery("#Licenses").jqGrid("navGrid", "#Licenses_pager1",
+{edit:false,add:false,del:false,view:false,search:false,excel:false}, {})
+jQuery("#Licenses").jqGrid("gridResize",{minWidth:350,minHeight:80});
+jQuery("#Licenses").jqGrid("navButtonAdd","#Licenses_pager1",{caption:"",title:"Toggle inline search", buttonicon :"fa-search",
+                        onClickButton:function(){
+                            phpGrid_Licenses[0].toggleToolbar();
+                        }
+                    });
+jQuery("#Licenses").jqGrid("filterToolbar", {
+                        searchOnEnter: false, 
+                        stringResult: true, 
+                        defaultSearch: "cn",
+                        beforeSearch: function () {
+                    postData = $(this).jqGrid("getGridParam", "postData"),
+                    filters = $.parseJSON(postData.filters);}
+
+                }); // foo
+phpGrid_Licenses[0].toggleToolbar();
+$("#t_Licenses")
+                        .append($("<div style=\"margin: .1em .1em .1em;height:auto;text-align:right;padding:3px\">" +
+                            "<input id=\"LicensesglobalSearchText\" type=\"text\" style=\"width:50%;padding:5px 5px 5px 0;font-size:larger\"></input>&nbsp;" +
+                            "<button id=\"LicensesglobalSearch\" style=\"background-color:#f0f0f0\" type=\"button\">Search</button></div>"));
+                    $(".ui-jqgrid .ui-userdata").css("height", "auto");$("#LicensesglobalSearchText").keypress(function (e) {
+                        var key = e.charCode || e.keyCode || 0;
+                        if (key === $.ui.keyCode.ENTER) { // 13
+                            $("#LicensesglobalSearch").click();
+                        }
+                    });
+                    $("#LicensesglobalSearch").button({
+                        icons: { primary: "ui-icon-circle-zoomout" },text: true
+                    }).click(function () {
+                        /*
+                        var rules = [], i, cm,   = phpGrid_Licenses.jqGrid("getGridParam", "postData"),
+                            colModel = phpGrid_Licenses.jqGrid("getGridParam", "colModel"),
+                            searchText = $("#LicensesglobalSearchText").val(),
+                            l = colModel.length;
+                        for (i = 0; i < l; i++) {
+                            cm = colModel[i];
+                            if (cm.search !== false && (cm.stype === undefined || cm.stype === "text")) {
+                                rules.push({
+                                    field: cm.name,op: "cn",data: searchText
+                                });
+                            }
+                        }
+                        */
+                        var postData = phpGrid_Licenses.jqGrid("getGridParam", "postData"),
+                            colModel = phpGrid_Licenses.jqGrid("getGridParam", "colModel"),
+                            rules = [],
+                            searchText = $("#LicensesglobalSearchText").val(),
+                            l = colModel.length,
+                            separator = " ",
+                            searchTextParts = $.trim(searchText).split(separator),
+                            cnParts = searchTextParts.length,
+                            i,
+                            iPart,
+                            cm;
+                        for (i = 0; i < l; i++) {
+                            cm = colModel[i];
+                            if (cm.search !== false && (cm.stype === undefined || cm.stype === "text")) {
+                                for (iPart = 0; iPart < cnParts; iPart++) {
+                                    rules.push({
+                                        field: cm.name,
+                                        op: "cn",
+                                        data: searchTextParts[iPart]
+                                    });
+                                }
+                            }
+                        }
+                        postData.filters = JSON.stringify({groupOp: "OR",rules: rules});
+                        phpGrid_Licenses.jqGrid("setGridParam", { search: true });
+                        phpGrid_Licenses.trigger("reloadGrid", [{page: 1, current: true}]);
+                        return false;
+                    });
+});
+function getSelRows()
+             {
+                var rows = jQuery("#Licenses").jqGrid("getGridParam","selarrrow");
+                return rows;
+             }
+// cellValue - the original value of the cell
+              // options - as set of options, e.g
+              // options.rowId - the primary key of the row
+              // options.colModel - colModel of the column
+              // rowObject - array of cell data for the row, so you can access other cells in the row if needed 
+function imageFormatter_Licenses(cellValue, options, rowObject)
+             {
+                return (cellValue == "" || cellValue === null)? "":"<img src=\""+ cellValue + "\" originalValue=\""+ cellValue +"\" title=\""+ cellValue +"\">";
+             }
+// cellValue - the original value of the cell
+              // options - as set of options, e.g
+              // options.rowId - the primary key of the row
+              // options.colModel - colModel of the column
+              // cellObject - the HMTL of the cell (td) holding the actual value 
+function imageUnformatter_Licenses(cellValue, options, cellObject)
+             {
+                return $(cellObject.html()).attr("originalValue");
+             }
+function booleanFormatter(cellValue, options, rowObject)
+             {
+                var op;
+                op = $.extend({},options.colModel.formatoptions);
+                myCars=new Array();
+                //alert(op.No);
+                //mycars[cellValue]=  op.boolean.No;
+                //mycars[cellValue]=  op.boolean.Yes;
+                myCars[op.No]="No";
+                myCars[op.Yes]="Yes";
+                //alert(options[boolean]);
+                return myCars[cellValue];
+             }
+function booleanUnformatter(cellValue, options, cellObject)
+             {    var op;
+                  op = $.extend({},options.colModel.formatoptions);
+                  //alert(op.No);
+                  if(cellValue=="No")
+                  return (op.No);
+                  else
+                  return (op.Yes);
+            //alert(op.boolean.Yes)
+            //return (op.boolean.cellValue);
+              //  myCars=new Array();
+            //    myCars["No"]='0';
+            //    myCars["Yes"]=1;
+                //alert(myCars[cellValue]);
+                //alert(options.colModel.formatoptions[1]);
+                //return myCars[cellValue];
+             }
+//]]>
+</script>
+<table id="Licenses"></table>
+<div id="Licenses_pager1"></div>
+<br />
+<script type="text/javascript">
+jQuery(document).ready(function($){ 
+phpGrid_Licenses.bind("jqGridSelectRow", function(status, rowid)
+{
+    
+    console.log(rowid);
+ 
+    idNumber = $('#Licenses').jqGrid('getCell',rowid,'id');
+    
+    window.location = encodeURI("/verify/checklicense.php" + "?" + "licid=" + idNumber);
+});
+jQuery( document ).ajaxComplete(function( event, xhr, settings ) {
+                        var notifyOptions = {autoHide: true};
+if ( settings.url.split("?")[0] === "/phpGrid/edit.php"){
+                            if( xhr.responseText.indexOf("PHPGRID_ERROR")>=0 || xhr.responseText.indexOf("PHPGRID_DEBUG")>=0){
+                                jQuery.notify( xhr.responseText, notifyOptions );
+                            }else{
+                                jQuery.notify( "Saved successfully!", "success" );
+                            }
+                        }
+                    });
+});
+</script>
+	
+
+
+<br /><br /><br /><br /><br />
+<div class="footer"><strong> Philippine Contractors Accreditation Board (PCAB) </strong> &copy; 2024.</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/js/bootstrap5-dropdown-ml.js"></script>
+</body>
+</html>
